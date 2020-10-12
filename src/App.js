@@ -21,12 +21,12 @@ function App() {
     const consultarAPI = async () => {
 
         if(consultar) {
-          const appId = 'c11a5e2033f0f29d1b7944c7a5563668';
+          const appId = '0f0bcc199f5283063ebe10139cba9e94';
           const url = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`;
   
           const respuesta = await fetch(url);
           const resultado = await respuesta.json();
-  
+
           guardarResultado(resultado);
           guardarConsultar(false);
 
@@ -38,7 +38,6 @@ function App() {
               guardarError(false);
           }
         }
-        
     }
     consultarAPI();
     // eslint-disable-next-line
